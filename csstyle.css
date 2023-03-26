@@ -1,0 +1,328 @@
+*:root{
+    margin: 0px;
+    padding: 0px;
+    font-family: poppins;
+}
+.logo-info {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.2rem;
+    margin-bottom: 0.6rem;
+  }
+  .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+  }
+  .nav-1 a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-right: 1.4rem;
+    color: black;
+    font-weight: 400;
+  }
+
+  .search-box {
+    margin-left: 0.6rem;
+    padding: 0.2rem 0.7rem;
+    border-radius: 0.5rem;
+    margin-right: 0.1rem;
+  }
+  .search-button {
+    padding: 0.15rem 0.43rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+  }
+  .nav-2 {
+    display: flex;
+    background-color: black;
+    height: 3rem;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .nav-2 li {
+    list-style-type: none;
+  }
+  .nav-2 a {
+    margin-right: 1.1rem;
+    text-decoration: none;
+    color: white;
+  }
+
+  .nav-2 a:first-child {
+    margin-left: 1.5rem;
+  }
+  .nav-2 a:last-child {
+    margin-right: 1.8rem;
+  }
+  .nav-2 ul {
+    display: flex;
+  }
+  .sub-menu-1 {
+    display: none;
+  }
+  .nav-2 ul li:hover .sub-menu-1 {
+    display: block;
+    position: absolute;
+    margin: 0 0 0 -15px;
+    background: rgb(0, 0, 0);
+  }
+  .nav-2 ul li:hover .sub-menu-1 ul {
+    display: block;
+    margin: 10px;
+    z-index: +1;
+  }
+  .nav-2 ul li:hover .sub-menu-1 ul li {
+    width: 15rem;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    text-align: left;
+    list-style-type: none;
+  }
+  /* .nav-2 ul li:hover .sub-menu-1 ul li a {
+text-decoration: none;
+} */
+  .nav-2 ul li:hover .sub-menu-1 ul li:last-child {
+    border-bottom: none;
+  }
+  .sub-menu-2 {
+    display: none;
+  }
+  .nav-2 ul li:hover .sub-menu-2 {
+    display: block;
+    position: absolute;
+    margin: 0 0 0 -15px;
+    background: rgb(0, 0, 0);
+  }
+  .nav-2 ul li:hover .sub-menu-2 ul {
+    display: block;
+    margin: 10px;
+  }
+  .nav-2 ul li:hover .sub-menu-2 ul li {
+    width: 20rem;
+    padding: 8px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    text-align: center;
+    list-style-type: none;
+  }
+  .nav-2 ul li:hover .sub-menu-2 ul li a {
+    font-size: 14px;
+  }
+  .nav-2 ul li:hover .sub-menu-2 ul li:last-child {
+    border-bottom: none;
+  }
+  .nav-2 ul li:hover .sub-menu-2 ul li a:hover {
+    cursor: pointer;
+  }
+  /* Sub-menu 3 */
+  .sub-menu-3 {
+    display: none;
+  }
+  .nav-2 ul li:hover .sub-menu-3 {
+    display: block;
+    position: absolute;
+    margin: 0 0 0 -15px;
+    background: rgb(0, 0, 0);
+  }
+  .nav-2 ul li:hover .sub-menu-3 ul {
+    display: block;
+    margin: 10px;
+  }
+  .nav-2 ul li:hover .sub-menu-3 ul li {
+    width: 14rem;
+    padding: 8px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    text-align: center;
+    list-style-type: none;
+  }
+  .nav-2 ul li:hover .sub-menu-3 ul li a {
+    font-size: 14px;
+    color: #fff;
+  }
+  .nav-2 ul li:hover .sub-menu-3 ul li:last-child {
+    border-bottom: none;
+  }
+  .nav-2 ul li:hover .sub-menu-3 ul li a:hover {
+    cursor: pointer;
+  }
+  /* sub-menu-4 */
+  .sub-menu-4 {
+    display: none;
+  }
+  .nav-2 ul li:hover .sub-menu-4 {
+    display: block;
+    position: absolute;
+    margin: 0 0 0 -15px;
+    background: rgb(0, 0, 0);
+  }
+  .nav-2 ul li:hover .sub-menu-4 ul {
+    display: block;
+    margin: 10px;
+  }
+  .nav-2 ul li:hover .sub-menu-4 ul li {
+    width: 14rem;
+    padding: 8px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    text-align: center;
+    list-style-type: none;
+  }
+  .nav-2 ul li:hover .sub-menu-4 ul li a {
+    font-size: 14px;
+    color: #fff;
+  }
+  .nav-2 ul li:hover .sub-menu-4 ul li:last-child {
+    border-bottom: none;
+  }
+  .nav-2 ul li:hover .sub-menu-4 ul li a:hover {
+    cursor: pointer;
+  }
+
+  /* department design */
+
+.department h1{
+    color: #92000A;
+    text-align: center;
+}
+
+.department h6{
+    color: #000000;
+    font-weight: normal;
+    font-size: 20px;
+    margin-top: -26px;
+    margin-left: 490px;
+    
+}
+
+.cs_dept{
+display: flex;
+width: 1240px;
+height: 466px;
+margin-top: 45px;
+margin-left: 150px;
+background: #000000;
+}
+
+.department .cs_dept .image img{
+    width: 494px;
+    height: 410px;
+    margin-top: 25px;
+    margin-left: 25px;
+
+}
+.detail{
+    color: #fff;
+    margin-left: 100px;
+    margin-top: 190px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.detail .head_no{
+    font-weight: lighter;
+}
+
+.detail .head{
+    color: #C38E3C;
+}
+
+.about p{
+margin-top: 50px;
+margin-left: 4rem;
+width: 90%;
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 36px;
+text-align: justify;
+}
+
+.second_head{
+    margin-left: 0px;
+    padding-left: 60px;
+    border: 0px solid;
+    background-color: #C38E3C;
+}
+
+.course_list{
+    margin-left: 60px;
+}
+
+/* faculty */
+.faculty{
+  margin-left: 0px;
+  padding-left: 60px;
+  border: 0px solid;
+  background-color: #C38E3C;
+}
+
+.faculty_image img{
+  border: 2px solid black;
+  height:150px;
+  width: 150px;
+}
+.faculty_main_contain{
+  display: flex;
+  gap: 2rem;
+  margin-left: 60px;
+  margin-top: 24px;
+}
+
+.faculty_detail ul{
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.faculty_detail ul:first-child{
+  margin-left: -41px;
+
+}
+
+/* button */
+
+.button a{
+  color: #fff;
+  text-decoration: none;
+  border: 0px solid black;
+  background-color: #000000;
+  margin-left: 650px;
+  padding: 10px 50px 10px 50px;
+}
+
+.button a:hover{
+  color: #000000;
+  background-color: #C38E3C;
+}
+
+/* footer */
+.main-footer {
+  background-color: #c38e3c;
+  height: 62vh;
+  width: 90vw;
+  margin-left: 4rem;
+
+  display: flex;
+  justify-content: space-evenly;
+  color: #fff;
+  margin-top: 3rem;
+}
+.footer-head {
+  padding-top: 1.4rem;
+  padding-bottom: 1.8rem;
+}
+.footer-family ul li {
+  margin-top: 0.7rem;
+  padding-bottom: 5px;
+  list-style-type: none;
+}
+.footer-family ul li:first-child {
+  margin-top: 1rem;
+}
+.footer-family ul li a {
+  text-decoration: none;
+  color: #fff;
+}

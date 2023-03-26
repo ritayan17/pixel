@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: "poppins", sans-serif;
+      box-sizing: border-box;
+    }
+    .logo-info {
+      display: flex;
+      justify-content: center;
+      margin-top: 1.2rem;
+      margin-bottom: 0.6rem;
+    }
+    .navigation {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 4rem;
+    }
+    .nav-1 a {
+      text-decoration: none;
+      font-size: 1.2rem;
+      margin-right: 1.4rem;
+      color: black;
+      font-weight: 400;
+    }
+
+    .search-box {
+      margin-left: 0.6rem;
+      padding: 0.2rem 0.7rem;
+      border-radius: 0.5rem;
+      margin-right: 0.1rem;
+    }
+    .search-button {
+      padding: 0.15rem 0.43rem;
+      border-radius: 0.2rem;
+      cursor: pointer;
+    }
+    .nav-2 {
+      display: flex;
+      background-color: black;
+      height: 3rem;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+    .nav-2 li {
+      list-style-type: none;
+    }
+    .nav-2 a {
+      margin-right: 1.1rem;
+      text-decoration: none;
+      color: white;
+    }
+
+    .nav-2 a:first-child {
+      margin-left: 1.5rem;
+    }
+    .nav-2 a:last-child {
+      margin-right: 1.8rem;
+    }
+    .nav-2 ul {
+      display: flex;
+    }
+    .sub-menu-1 {
+      display: none;
+    }
+    .nav-2 ul li:hover .sub-menu-1 {
+      display: block;
+      position: absolute;
+      margin: 0 0 0 -15px;
+      background: rgb(0, 0, 0);
+    }
+    .nav-2 ul li:hover .sub-menu-1 ul {
+      display: block;
+      margin: 10px;
+      padding-top: 5px;
+      z-index: +1;
+    }
+    .nav-2 ul li:hover .sub-menu-1 ul li {
+      width: 15rem;
+      padding: 10px;
+      border-bottom: 1px dotted #fff;
+      background: transparent;
+      text-align: left;
+      list-style-type: none;
+    }
+    /* .nav-2 ul li:hover .sub-menu-1 ul li a {
+      text-decoration: none;
+    } */
+    .nav-2 ul li:hover .sub-menu-1 ul li:last-child {
+      border-bottom: none;
+    }
+    .sub-menu-2 {
+      display: none;
+    }
+    .nav-2 ul li:hover .sub-menu-2 {
+      display: block;
+      position: absolute;
+      margin: 0 0 0 -15px;
+      background: rgb(0, 0, 0);
+    }
+    .nav-2 ul li:hover .sub-menu-2 ul {
+      display: block;
+      margin: 10px;
+      padding-top: 5px;
+    }
+    .nav-2 ul li:hover .sub-menu-2 ul li {
+      width: 20rem;
+      padding: 8px;
+      border-bottom: 1px dotted #fff;
+      background: transparent;
+      text-align: center;
+      list-style-type: none;
+    }
+    .nav-2 ul li:hover .sub-menu-2 ul li a {
+      font-size: 14px;
+    }
+    .nav-2 ul li:hover .sub-menu-2 ul li:last-child {
+      border-bottom: none;
+    }
+    .nav-2 ul li:hover .sub-menu-2 ul li a:hover {
+      cursor: pointer;
+    }
+    /* Sub-menu 3 */
+    .sub-menu-3 {
+      display: none;
+    }
+    .nav-2 ul li:hover .sub-menu-3 {
+      display: block;
+      position: absolute;
+      margin: 0 0 0 -15px;
+      background: rgb(0, 0, 0);
+    }
+    .nav-2 ul li:hover .sub-menu-3 ul {
+      display: block;
+      margin: 10px;
+      padding-top: 5px;
+    }
+    .nav-2 ul li:hover .sub-menu-3 ul li {
+      width: 14rem;
+      padding: 8px;
+      border-bottom: 1px dotted #fff;
+      background: transparent;
+      text-align: center;
+      list-style-type: none;
+    }
+    .nav-2 ul li:hover .sub-menu-3 ul li a {
+      font-size: 14px;
+      color: #fff;
+    }
+    .nav-2 ul li:hover .sub-menu-3 ul li:last-child {
+      border-bottom: none;
+    }
+    .nav-2 ul li:hover .sub-menu-3 ul li a:hover {
+      cursor: pointer;
+    }
+    /* sub-menu-4 */
+    .sub-menu-4 {
+      display: none;
+    }
+    .nav-2 ul li:hover .sub-menu-4 {
+      display: block;
+      position: absolute;
+      margin: 0 0 0 -15px;
+      background: rgb(0, 0, 0);
+    }
+    .nav-2 ul li:hover .sub-menu-4 ul {
+      display: block;
+      margin: 10px;
+      padding-top: 5px;
+    }
+    .nav-2 ul li:hover .sub-menu-4 ul li {
+      width: 14rem;
+      padding: 8px;
+      border-bottom: 1px dotted #fff;
+      background: transparent;
+      text-align: center;
+      list-style-type: none;
+    }
+    .nav-2 ul li:hover .sub-menu-4 ul li a {
+      font-size: 14px;
+      color: #fff;
+    }
+    .nav-2 ul li:hover .sub-menu-4 ul li:last-child {
+      border-bottom: none;
+    }
+    .nav-2 ul li:hover .sub-menu-4 ul li a:hover {
+      cursor: pointer;
+    }
+    .gallery-box {
+      margin-top: 5rem;
+      margin-left: 4rem;
+      height: 27rem;
+      width: 77rem;
+      color: white;
+      background-color: black;
+      position: relative;
+
+      z-index: -1;
+    }
+    .year-part {
+      height: 3rem;
+      width: 6rem;
+      position: absolute;
+      background-color: black;
+      border-radius: 0 1.5rem 0 0;
+      top: 17.9rem;
+      left: 4rem;
+    }
+    .year-part p {
+      color: #fff;
+      text-align: center;
+      padding-top: 0.8rem;
+    }
+    .year-part-2 {
+      height: 3rem;
+      width: 6rem;
+      position: absolute;
+      background-color: black;
+      border-radius: 0 1.5rem 0 0;
+      top: 49.5rem;
+      left: 4rem;
+    }
+    .year-part-2 p {
+      color: #fff;
+      text-align: center;
+      padding-top: 0.8rem;
+    }
+    .year-part-3 {
+      height: 3rem;
+      width: 6rem;
+      position: absolute;
+      background-color: black;
+      border-radius: 0 1.5rem 0 0;
+      top: 81.5rem;
+      left: 4rem;
+    }
+    .year-part-3 p {
+      color: #fff;
+      text-align: center;
+      padding-top: 0.8rem;
+    }
+    .gallery-img {
+      margin-top: 3rem;
+      margin-left: 3rem;
+      height: 18rem;
+      width: 27rem;
+    }
+    .main-footer {
+      background-color: #c38e3c;
+      height: 30rem;
+      width: 77rem;
+      margin-left: 4rem;
+
+      display: flex;
+      justify-content: space-evenly;
+      color: #fff;
+      margin-top: 3rem;
+    }
+    .footer-head {
+      padding-top: 1.4rem;
+      padding-bottom: 1.8rem;
+    }
+    .footer-family ul li {
+      margin-top: 0.7rem;
+      padding-bottom: 5px;
+      list-style-type: none;
+    }
+    .footer-family ul li:first-child {
+      margin-top: 1rem;
+    }
+    .footer-family ul li a {
+      text-decoration: none;
+      color: #fff;
+    }
+  </style>
+  <body>
+    <div class="logo-info">
+      <img class="sliet-logo" src="images/Sliet logo.png" alt="" />
+      <img class="sant-longo" src="images/Sant Longowal.png" alt="" />
+    </div>
+    <div class="navigation">
+      <nav class="nav-1">
+        <a href="#">Tender</a>
+        <a href="#">Telephone Directory</a>
+        <a href="#">Vacancy</a>
+        <a href="#">RTI</a>
+        <a href="#">NAAC</a>
+        <a href="#">Contact Us</a>
+      </nav>
+      <input class="search-box" type="text" placeholder="Search Here" />
+      <button class="search-button">Search</button>
+    </div>
+
+    <nav class="nav-2">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="#">The Institute</a>
+          <div class="sub-menu-1">
+            <ul>
+              <li><a href="visionmision.html">Vision And Mission</a></li>
+              <li>
+                <a href="http://sliet.ac.in/about-the-institute/"
+                  >About Institute</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://sliet.ac.in/wp-content/uploads/2021/10/ORGNSCHART.pdf"
+                  >Organisation Chart</a
+                >
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="#">Academics</a></li>
+        <li>
+          <a href="#">Department</a>
+          <div class="sub-menu-2">
+            <ul>
+              <li>
+                <a href="CS_Dept.html">Computer Science & Engineering</a>
+              </li>
+              <li>
+                <a href="chemical.html">Chemical Engineering</a>
+              </li>
+              <li><a href="">Civil Engineering</a></li>
+              <li>
+                <a href="electronics.html"
+                  >Electronics & Communications Engineering</a
+                >
+              </li>
+              <li>
+                <a href="electrical.html"
+                  >Electrical & Instrumentation Engineering</a
+                >
+              </li>
+              <li>
+                <a href="food.html">Food Engineering & Technology</a>
+              </li>
+              <li>
+                <a href="mechanical.html">Mechanical Engineering</a>
+              </li>
+              <li><a href="chemistry.html">Chemistry</a></li>
+              <li><a href="Math.html">Mathematics</a></li>
+              <li><a href="#">Physics</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="#">Administration</a>
+          <div class="sub-menu-3">
+            <ul>
+              <li><a href="">Admin Section</a></li>
+              <li><a href="">Account & Audit</a></li>
+              <li><a href="">Store & Purchase Section</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <a href="#">Facilities</a>
+          <div class="sub-menu-4">
+            <ul>
+              <li><a href="Acss.html">A.C.S.S</a></li>
+              <li><a href="centrallibrary.html">Central Library</a></li>
+              <li><a href="Workshop.html">Workshop</a></li>
+              <li><a href="hostel.html">Hostels</a></li>
+              <li><a href="">Estate Office</a></li>
+              <li><a href="healthcentre.html">Health Center</a></li>
+              <li><a href="sports.html">Sports</a></li>
+              <li><a href="innovation.html">Innovation Cell</a></li>
+              <li><a href="">Centre of Excellence</a></li>
+              <li><a href="guesthouse.html">Guest House</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="#">Placements</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="aboutUs.html">About Us</a></li>
+      </ul>
+    </nav>
+
+    <div class="year-part">
+      <p>2023</p>
+    </div>
+    <div class="gallery-box">
+      <a href="gallerimages.html"
+        ><img class="gallery-img" src="images/RepublicDay74th1.jpg"
+      /></a>
+    </div>
+    <!-- 2022 -->
+    <div class="year-part-2">
+      <p>2022</p>
+    </div>
+    <div class="gallery-box">
+      <img class="gallery-img" src="images/ConvocationDec2022-1.jpg" />
+      <img class="gallery-img" src="images/AnnualAthleticMeet2022-7.jpg" />
+    </div>
+    <!-- 2021 -->
+    <div class="year-part-3">
+      <p>2021</p>
+    </div>
+    <div class="gallery-box">
+      <img class="gallery-img" src="images/Conv2021-05-1024x678.jpg" />
+      <img class="gallery-img" src="images/Republic5-1024x678.jpg" />
+    </div>
+    <div class="main-footer">
+      <div class="footer-family">
+        <ul>
+          <li class="footer-head">GENERAL INFO</li>
+          <li><a href="">Contact Us</a></li>
+          <li><a href="">Website Team</a></li>
+          <li><a href="">Downloads</a></li>
+          <li><a href="">Vacancy</a></li>
+          <li><a href="">Academic Calendar</a></li>
+          <li><a href="">SlIET Telephone Directory</a></li>
+        </ul>
+      </div>
+      <div class="footer-family">
+        <ul>
+          <li class="footer-head">EMPLOYEE CORNER</li>
+          <li><a href="">Rule & Regulations</a></li>
+          <li><a href="">Office Order</a></li>
+          <li><a href="">Grievance Redressal</a></li>
+          <li><a href="">Login</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-family">
+        <ul>
+          <li class="footer-head">CELLS</li>
+          <li><a href="">Scholarship Cell</a></li>
+          <li><a href="">IQAC</a></li>
+          <li><a href="">Annual Report 2020-2021</a></li>
+          <li><a href="">SPIC MACAY</a></li>
+          <li><a href="">IC Committee</a></li>
+          <li><a href="">Nodal Officer</a></li>
+          <li><a href="">Student's Mentor & TG Scheme</a></li>
+          <li><a href="">SC-ST & OBC-EWS</a></li>
+        </ul>
+      </div>
+      <div class="footer-family">
+        <ul>
+          <li class="footer-head">USEFUL LINKS</li>
+          <li><a href="">RTI</a></li>
+          <li><a href="">Alumni</a></li>
+          <li><a href="">I-STEM</a></li>
+          <li><a href="">DASA Admission</a></li>
+          <li><a href="">Anti-Ragging</a></li>
+          <li><a href="">NAD</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
